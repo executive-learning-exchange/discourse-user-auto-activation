@@ -1,0 +1,1 @@
+# discourse_user_auto_activation
