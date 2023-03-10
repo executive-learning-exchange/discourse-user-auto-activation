@@ -20,6 +20,10 @@ after_initialize do
       def user_params
         merge_fields = { ip_address: request.ip }
         merge_fields.merge!(active: true) if SiteSetting.auto_activation_enabled
+
+        existing_permitted_params = params.permit!
+        existing_permitted_params.merge(merge_fields)
+
       end
     end
   end
