@@ -24,6 +24,9 @@ after_initialize do
         existing_permitted_params = params.permit!
         existing_permitted_params.merge(merge_fields)
 
+        # Whitelist the merged params
+         ActionController::Parameters.new(my_merged_params).permit!
+
       end
     end
   end
