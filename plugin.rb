@@ -1,6 +1,7 @@
-# name: auto activation
+# name: discourse-user-auto-activation
 # about: Auto activate new accounts
-# version: 1
+# authors: Alex Wang
+# version: 1.1
 
 
 after_initialize do
